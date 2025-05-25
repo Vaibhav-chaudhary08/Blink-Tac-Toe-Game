@@ -1,0 +1,141 @@
+.setup-container {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+}
+
+.setup-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.setup-header h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.player-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: 2px solid #ecf0f1;
+  background: #ecf0f1;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.tab.active {
+  background: #3498db;
+  border-color: #3498db;
+  color: white;
+}
+
+.categories-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.category-option {
+  border: 2px solid #ecf0f1;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fafbfc;
+  text-align: center;
+}
+
+.category-option:hover {
+  border-color: #3498db;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+.category-option.selected {
+  border-color: #27ae60;
+  background: #d5f4e6;
+}
+
+.category-option.taken {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f8f9fa;
+}
+
+.category-option.taken:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: #ecf0f1;
+}
+
+.category-title {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.emoji-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.emoji-preview {
+  font-size: 1.5rem;
+}
+
+.start-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 40px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.start-btn:hover {
+  background: #229954;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+@media (max-width: 768px) {
+  .setup-container {
+    padding: 20px;
+  }
+
+  .categories-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .category-option {
+    padding: 15px;
+  }
+
+  .player-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+}
